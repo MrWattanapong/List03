@@ -20,4 +20,6 @@ public class Course {
     public String getTitle(){ return title; }
     public String getDescription(){ return description; }
     public double getCredits(){ return credits; }
+
+    @Override public String toString(){return title;}
 }
