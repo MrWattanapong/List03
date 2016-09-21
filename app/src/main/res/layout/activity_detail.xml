@@ -18,17 +18,16 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:gravity="center_horizontal"
-        android:textSize="30dp"
+        android:textSize="25dp"
         android:textColor="#00ccff" />
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/scrollView"
-        android:layout_below="@+id/courseTitleText"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="50dp" >
+        android:layout_below="@+id/courseTitleText"
+        android:layout_marginTop="20dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -42,7 +41,6 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/scrollView"
         android:layout_alignParentStart="true">
 
         <ImageView
@@ -55,11 +53,12 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="New Text"
             android:id="@+id/textView"
-            android:textSize="30dp"
+            android:textSize="20dp"
             android:layout_gravity="bottom|right"
-            android:gravity="bottom|right" />
+            android:gravity="bottom|right"
+            android:layout_weight="1"
+            android:text="New Text" />
     </LinearLayout>
 
 </RelativeLayout>

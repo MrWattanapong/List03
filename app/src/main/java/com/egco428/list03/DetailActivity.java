@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class DetailActivity extends AppCompatActivity {
@@ -23,6 +24,20 @@ public class DetailActivity extends AppCompatActivity {
         String courseDesc = getIntent().getStringExtra(MainActivity.Course_Desc);
         TextView descText = (TextView)findViewById(R.id.descriptionText);
         descText.setText(courseDesc);
+
+        int courseNumber = getIntent().getIntExtra(MainActivity.Course_Num,0);
+        String courseNumber1 = "CourseNumber : "+courseNumber + "   ";
+
+        double courseCre = getIntent().getDoubleExtra(MainActivity.Course_Credits,0);
+        String courseCre1 = "Credits : "+courseCre;
+
+        TextView textView = (TextView)findViewById(R.id.textView);
+        textView.setText(courseNumber1+courseCre1);
+
+        int resId = getResources().getIdentifier("images"+courseNumber, "drawable", getPackageName());
+        ImageView courseImage = (ImageView)findViewById(R.id.imageView2);
+        courseImage.setImageResource(resId);
+
     }
 
     @Override
