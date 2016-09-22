@@ -4,7 +4,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import java.text.NumberFormat;
 
 public class DetailActivity extends AppCompatActivity {
 
@@ -24,18 +27,19 @@ public class DetailActivity extends AppCompatActivity {
         TextView descText = (TextView)findViewById(R.id.descriptionText);
         descText.setText(courseDesc);
 
-        //int courseNumber = getIntent().getIntExtra(MainActivity.Course_Num,0);
-        //String courseNumber1 = "CourseNumber : "+courseNumber + "\n";
+        int courseNo = getIntent().getIntExtra(MainActivity.Course_Number,10101);
+        TextView courseNoText = (TextView)findViewById(R.id.courseNoText);
+        courseNoText.setText("Course No: "+courseNo);
 
-        //double courseCre = getIntent().getDoubleExtra(MainActivity.Course_Credits,0);
-        //String courseCre1 = "Credits : "+courseCre;
+        double credits = getIntent().getDoubleExtra(MainActivity.Course_Credits,1);
+        TextView creditsTxt = (TextView)findViewById(R.id.creditText);
+        NumberFormat formatter = NumberFormat.getInstance();
+        formatter.setMinimumFractionDigits(1);
+        creditsTxt.setText("Credits: "+formatter.format(credits));
 
-        //TextView textView = (TextView)findViewById(R.id.textView);
-        //textView.setText(courseNumber1+courseCre1);
-
-        //int resId = getResources().getIdentifier("images"+courseNumber, "drawable", getPackageName());
-        //ImageView courseImage = (ImageView)findViewById(R.id.imageView2);
-        //courseImage.setImageResource(resId);
+        ImageView detailImage = (ImageView)findViewById(R.id.imageCourse);
+        int res = getResources().getIdentifier("images"+courseNo, "drawable", getPackageName());
+        detailImage.setImageResource(res);
 
     }
 

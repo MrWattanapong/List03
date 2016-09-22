@@ -19,6 +19,9 @@
         android:id="@+id/titleText"
         android:textSize="26dp"
         android:layout_alignBottom="@+id/ImageCouse"
-        android:layout_toEndOf="@+id/ImageCouse" />
+        android:layout_toEndOf="@+id/ImageCouse"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="15dp" />
 
 </RelativeLayout>
