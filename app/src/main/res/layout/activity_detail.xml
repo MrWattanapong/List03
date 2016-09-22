@@ -13,8 +13,8 @@
         android:layout_width="fill_parent"
         android:layout_height="50dp"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Course Detail"
-        android:id="@+id/courseTitleText"
+        android:text="@string/TitleName"
+        android:id="@+id/TitleText"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:gravity="center_horizontal"
@@ -22,43 +22,66 @@
         android:textColor="#00ccff" />
 
     <ScrollView
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/scrollView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/courseTitleText"
-        android:layout_marginTop="20dp">
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/TitleText"
+        android:layout_below="@+id/imageCourse">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="New Text"
             android:id="@+id/descriptionText"
-            android:text="Medium Text" />
+            android:paddingTop="10dp"
+            android:paddingRight="10dp" />
     </ScrollView>
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentStart="true">
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/imageCourse"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/logo" />
 
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:id="@+id/imageView2"
-            android:layout_gravity="bottom|left"
-            android:src="@drawable/logo" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/textView"
-            android:textSize="20dp"
-            android:layout_gravity="bottom|right"
-            android:gravity="bottom|right"
-            android:layout_weight="1"
-            android:text="New Text" />
+            android:text="New Text"
+            android:id="@+id/courseNoText"
+            android:textSize="26dp"
+            android:textColor="#00ff2f" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/creditText"
+            android:textSize="26dp"
+            android:textColor="#0008ff" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Button"
+            android:id="@+id/button" />
+
     </LinearLayout>
 
 </RelativeLayout>
